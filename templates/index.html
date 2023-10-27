@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plotify</title>
+    <link rel="stylesheet" href="/static/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 style="text-align: center">Welcome to Plotify!</h1>
+      <br />
+      <p id="introPara">
+        Introducing "Plotify" - a user-friendly web tool for effortless data
+        visualization. Input data, choose from various chart types, and enjoy
+        real-time feedback. Export, share, and save your projects. Make data
+        come alive with responsive design. "Plotify" : Your Data Visualization
+        Companion for dynamic insights!
+      </p>
+      <div class="inputContainer">
+        <form action="POST">
+          <p style="text-align: center">Enter the name of the Graph</p>
+          <input
+            style="margin-left: 25%"
+            type="text"
+            name="Enter the name"
+            id="graphName"
+          />
+          <table border="1" id="mainTable">
+            <tr>
+              <th>X-axis</th>
+              <th>Y-axis</th>
+            </tr>
+            <tr>
+              <td><input type="number" /></td>
+              <td>
+                <input type="number" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button onclick="addRow()">Add Row +</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
