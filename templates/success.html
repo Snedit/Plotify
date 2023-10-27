@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #image {
+        border: 2px solid cyan;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #333">
+    <div id="image">
+      <p>{{target}}</p>
+      <img id="finalImg" src="" alt="error" />
+    </div>
+  </body>
+  <script>
+    const imgelem = document.querySelector("#finalImg");
+    setTimeout(() => {
+      imgelem.src = "images/{{target}}.png";
+    }, 3000);
+  </script>
+</html>

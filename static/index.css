@@ -24,9 +24,30 @@ h1{
 .inputContainer{
     border: 2px solid white;
     border-radius: 9px;
-    
-
+    width: fit-content ;
+position: fixed;
     margin-top: 2%;
-    display: flex;
-    justify-content: center
+
+    left: 50%;
+    margin-top: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 20px;
+    transform: translate(-50%,0%);
+}
+table{
+    margin-top: 10px;
+}
+.opContainer
+{
+    border: 2px solid lavender;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 12;
+    left: 50%;
+    margin-top: 18%;
+    padding: 20px;
+    transform: translate(-50%, 0%);
+    background-color: rgb(236, 130, 130);
+    
 }

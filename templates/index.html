@@ -18,34 +18,48 @@
         Companion for dynamic insights!
       </p>
       <div class="inputContainer">
-        <form action="POST">
-          <p style="text-align: center">Enter the name of the Graph</p>
+        <form action="/process" method="POST">
+          <h3 style="text-align: center">Enter the name of the Graph</h3>
+
           <input
             style="margin-left: 25%"
             type="text"
-            name="Enter the name"
+            name="graphName"
             id="graphName"
           />
+          <br />
+          <input
+            type="text"
+            required
+            name="x_label"
+            placeholder="Label for X-axis"
+          /><br />
+          <input
+            type="text"
+            name="y_label"
+            required
+            placeholder="Label for X-axis"
+          />
+          <br />
           <table border="1" id="mainTable">
             <tr>
               <th>X-axis</th>
               <th>Y-axis</th>
             </tr>
             <tr>
-              <td><input type="number" /></td>
+              <td><input type="number" name="x_axis" required /></td>
               <td>
-                <input type="number" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <button onclick="addRow()">Add Row +</button>
+                <input type="number" name="y_axis" required />
               </td>
             </tr>
           </table>
+          <input style="display: inline" type="submit" value="submit" />
         </form>
+        <button id="addR" onclick="addRow()">Add Row +</button>
       </div>
+
+      <div class="opContainer">{{ display }}</div>
     </div>
-    <script src="/src/index.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>
