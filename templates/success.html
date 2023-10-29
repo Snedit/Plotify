@@ -13,14 +13,13 @@
   </head>
   <body style="background-color: #333">
     <div id="image">
-      <p>{{target}}</p>
-      <img id="finalImg" src="" alt="error" />
+      <h2>
+        Success!!
+        <p>
+          If you were not redirected to your graph,
+          <a href="/reClick"> click here </a>
+        </p>
+      </h2>
     </div>
   </body>
-  <script>
-    const imgelem = document.querySelector("#finalImg");
-    setTimeout(() => {
-      imgelem.src = "images/{{target}}.png";
-    }, 3000);
-  </script>
 </html>
