@@ -1,9 +1,6 @@
 from bokeh.plotting import figure, output_file, show
-from flask import Flask, render_template, request, send_from_directory, url_for
-import matplotlib.pyplot as plt
-import matplotlib
-# import os 
-matplotlib.use('Agg')
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 # app('/static', '/path/to/static')
 @app.route("/")
@@ -64,26 +61,26 @@ def reclick():
  
 
 # @app.route('/matplotlib_plot')
-def matplotlib_plot(xCord, yCord, gName, xL, yL):
-    try:
-        plt.plot(xCord, yCord, label='Data', marker='o')  
-        plt.xlabel(xL)
-        plt.ylabel(yL)
-        plt.title(gName)
-        plt.legend()
-        plt.show()
-        plt.savefig(f"/images/{gName}.png")
+# def matplotlib_plot(xCord, yCord, gName, xL, yL):
+#     try:
+#         plt.plot(xCord, yCord, label='Data', marker='o')  
+#         plt.xlabel(xL)
+#         plt.ylabel(yL)
+#         plt.title(gName)
+#         plt.legend()
+#         plt.show()
+#         plt.savefig(f"/images/{gName}.png")
 
     
-    # if os.path.isfile(f"images/{gName}.png"):
-    #     os.remove(f"images/{gName}.png")
+#     # if os.path.isfile(f"images/{gName}.png"):
+#     #     os.remove(f"images/{gName}.png")
 
 
         
-        return "gg"
-    except Exception as e:
-        print(f"{e} MY GODD")
-        return "ded"
+#         return "gg"
+#     except Exception as e:
+#         print(f"{e} MY GODD")
+#         return "ded"
 
 
 
