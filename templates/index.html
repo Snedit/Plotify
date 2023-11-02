@@ -28,6 +28,14 @@
             id="graphName"
           />
           <br />
+          <label for="choose">Select the type of graph</label>
+          <select name="choose" id="SelG">
+            <option value="scatt">Scattered</option>
+            <option value="dotted">Dotted</option>
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+          </select>
+          <br />
           <input
             type="text"
             required
@@ -38,7 +46,7 @@
             type="text"
             name="y_label"
             required
-            placeholder="Label for X-axis"
+            placeholder="Label for Y-axis"
           />
           <br />
           <table border="1" id="mainTable">
